@@ -1,4 +1,4 @@
-# Lazy - lazy evaluator pipeling
+# LazyPipe - lazy evaluator pipeling
 
 Simple lazy evaluation of value piping. Create the logic before and compute the
 value only when needed.
