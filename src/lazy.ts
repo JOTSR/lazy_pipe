@@ -7,9 +7,9 @@ export class Lazy<Args> {
 	#consumed = false
 
 	/**
-	 * Convert a value to a lzy evaluable value.
+	 * Convert a value to a lazy evaluable value.
 	 * @param {Args} ref - Any vaue to lazyfy.
-	 * ```
+	 * ```ts
 	 * const lazyValue = new Lazy([1, 2, 3])
 	 *     .pipe(self => self.map(x => 2 * x))
 	 *     .pipe(self => self.join(', '))
@@ -25,10 +25,10 @@ export class Lazy<Args> {
 	}
 
 	/**
-	 * Convert a value to a lzy evaluable value.
+	 * Convert a value to a lazy evaluable value.
 	 * @param {Args} ref - Any value.
 	 * @returns A new instance of Lazy.
-	 * ```
+	 * ```ts
 	 * const lazyValues = array.map(Lazy.from)
 	 * ```
 	 */
@@ -41,7 +41,7 @@ export class Lazy<Args> {
 	 * chain.
 	 * @param callable - The function to be called.
 	 * @returns Extended lazy value.
-	 * ```
+	 * ```ts
 	 * const lazyValue = new Lazy(array)
 	 *     .pipe(self => self.map(x => x * 3))
 	 *     .pipe(self => self.toReversed())
@@ -59,7 +59,7 @@ export class Lazy<Args> {
 	 * It iterates over the chain of callables, yielding the result of each callable applied to the
 	 * previous result.
 	 * The lazy value is consumed at the end of the iteration.
-	 * ```
+	 * ```ts
 	 * const lazyString = new Lazy('lazy')
 	 *     .pipe(self => self.toUpperCase())
 	 * 	   .pipe(self => self.split(''))
@@ -83,7 +83,7 @@ export class Lazy<Args> {
 	/**
 	 * Consume and return the value of the lazyn chain.
 	 * @returns Lazy computed value.
-	 * ```
+	 * ```ts
 	 * const mappedArray = new Lazy([1, 2, 3]).pipe(self => self.map(x => 2 * x)).value
 	 * ```
 	 */
