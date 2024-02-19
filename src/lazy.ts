@@ -90,6 +90,6 @@ export class Lazy<Args> {
 	get value(): Args {
 		return Array.from(this.iterate()).reduce((_, curr) =>
 			curr
-		) as unknown as Args
+		) as Args
 	}
 }
