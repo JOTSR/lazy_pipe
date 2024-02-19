@@ -8,7 +8,7 @@ export class Lazy<Args> {
 
 	/**
 	 * Convert a value to a lazy evaluable value.
-	 * @param {Args} ref - Any vaue to lazyfy.
+	 * @param {Args} ref - Any value to lazyfy.
 	 * ```ts
 	 * const lazyValue = new Lazy([1, 2, 3])
 	 *     .pipe(self => self.map(x => 2 * x))
@@ -81,7 +81,7 @@ export class Lazy<Args> {
 	}
 
 	/**
-	 * Consume and return the value of the lazyn chain.
+	 * Consume and return the value of the lazy chain.
 	 * @returns Lazy computed value.
 	 * ```ts
 	 * const mappedArray = new Lazy([1, 2, 3]).pipe(self => self.map(x => 2 * x)).value
