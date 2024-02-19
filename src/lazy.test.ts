@@ -33,7 +33,7 @@ Deno.test({
 		assertEquals(
 			lazyValue.value,
 			value,
-			'lazy evaluation result differe from synchronous call',
+			'lazy evaluation result differs from synchronous call',
 		)
 		assertEquals(callTrace, [1, 2, 3], 'lazy call before accessing value')
 	},
