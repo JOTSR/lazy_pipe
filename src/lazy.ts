@@ -74,7 +74,8 @@ export class Lazy<Args> {
 
 		for (const callable of this.#chain) {
 			//@ts-ignore chain cast
-			yield this.#ref = callable(this.#ref)
+			this.#ref = callable(this.#ref)
+			yield this.#ref
 		}
 
 		this.#consumed = true
