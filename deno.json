@@ -1,4 +1,7 @@
 {
+	"imports": {
+		"assert": "jsr:@std/assert@0.216"
+	},
 	"fmt": {
 		"options": {
 			"semiColons": false,
