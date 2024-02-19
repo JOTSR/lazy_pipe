@@ -89,8 +89,6 @@ export class Lazy<Args> {
 	 * ```
 	 */
 	get value(): Args {
-		return Array.from(this.iterate()).reduce((_, curr) =>
-			curr
-		)
+		return Array.from(this.iterate()).reduce((_, curr) => curr)
 	}
 }

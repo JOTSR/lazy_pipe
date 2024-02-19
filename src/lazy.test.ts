@@ -1,7 +1,4 @@
-import {
-	assertEquals,
-	assertThrows,
-} from 'assert'
+import { assertEquals, assertThrows } from 'assert'
 import { Lazy } from './lazy.ts'
 
 const callTrace: number[] = []
