@@ -32,7 +32,7 @@ export class Lazy<Args> {
 	 * const lazyValues = array.map(Lazy.from)
 	 * ```
 	 */
-	static from<Args>(ref: Args) {
+	static from<Args>(ref: Args): Lazy<Args> {
 		return new Lazy<Args>(ref)
 	}
 
@@ -69,7 +69,7 @@ export class Lazy<Args> {
 	 * }
 	 * ```
 	 */
-	*iterate() {
+	*iterate(): Generator<Args, void, void> {
 		if (this.#consumed) throw new Error('Value already consumed')
 
 		for (const callable of this.#chain) {
